@@ -1,8 +1,142 @@
-  
+@import "https://necolas.github.io/normalize.css/8.0.1/normalize.css";
+
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 110em;
   text-align: center;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #f85032;
+  background: -webkit-linear-gradient(to right, #e73827, #f85032); 
+  background: linear-gradient(to right, #e73827, #f85032);  */
+}
+.dashboard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-top: 0;
+}
+.home{
+display: flex;
+}
+.footer{
+display: flex;
+width:100%;
+padding-bottom: 0;
+}
+.ui.main.container {
+  min-height: 66.5em;
+  display: flex;
 }
 
-.ui.main.container{
-  margin-top: 6.2em;
+
+*{
+  font-family:sans-serif;
+}
+
+.job-posting-card{
+  margin: 30px auto;
+  background-color: white;
+  height: 85%;
+  width: 70%;
+  border-radius: 6px;
+  border-top: 4px solid #199AD6;
+  box-shadow: 6px 6px 5px #c0c0c0;
+  position: relative;
+  padding-bottom: 10px;
+  transition: width 3s;
+}
+
+
+
+.job-posting-card-city{
+  color: #c0c0c0;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+  margin: 10px 10px;
+  border-radius: 5px;
+}
+
+.job-posting-card-header{
+  font-size: 25px;
+  margin-top: 16px;
+}
+
+.job-posting-card-body{
+  margin-top: 30px;
+  padding-bottom: 20px;
+  width: 90%;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.job-posting-card-city{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.job-posting-card-salary{
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  padding: 10px;
+  color: #c0c0c0;
+}
+
+.job-posting-card-detail-button{
+  margin-top: 10px;
+  margin-right: 75%;
+}
+
+.cardHeader{
+  text-align: left;
+ font-size: larger;
+}
+
+.company{
+  text-align: left;
+}
+
+.workingTime{
+  float: left;
+}
+.city{
+  float:right
+}
+
+.ui.widget {
+  -webkit-box-shadow: 5em 5em 5em;
+  -moz-box-shadow: 5em 5em 5em;
+  box-shadow: 5em 5em 5em;
+}
+/* This will also have a red box shadow */
+.ui.red.widget {
+  color: #FF0000;
+}
+
+.shadow{
+  box-shadow:0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2)!important;
+}
+.cardjp{
+  border: 1px solid grey!important;
+}
+.shadow:hover{
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.5), 0 30px 80px rgba(166,173,201,.2)!important;
+}
+.cardContent{
+  background-color: white!important;
 }

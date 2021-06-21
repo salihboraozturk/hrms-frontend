@@ -1,25 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Button, Container, Menu } from "semantic-ui-react";
+import { Container, Button, Image, Menu, Icon } from "semantic-ui-react";
 
 export default function Navi() {
   return (
-    <div>
-      <Menu size="large" fixed="top">
+    <div style={{ width: "100%"}}>
+      <Menu fixed="top" style={{backgroundColor:"#4471FE"}} secondary>
         <Container>
-          <Menu.Item name="HRMS Project" />
-
-          <Menu.Item name="home" as={NavLink} to="/employerlist"></Menu.Item>
-
-          <Menu.Item name="jobPostings" />
-
-          <Menu.Menu position="right">
-            <Menu.Item name="İş İlanı Ekle"  as={NavLink} to="/addJobPosting"/>
-            <Menu.Item>
+          <Menu.Item name="HRMS" exact as={NavLink} to="/">
+           <Image size="small" src="http://localhost:3000/logo.png"></Image>
+          </Menu.Item>
+          <Menu.Item as={NavLink} to="/jobposting"><strong>İş İlanları</strong></Menu.Item>
+          <Menu.Menu position="right" >
+            <Menu.Item style={{paddingRight:"0px",marginRight:"0px"}}>
               <Button.Group>
-                <Button>Sign In</Button>
+                <Button>Giris Yap</Button>
                 <Button.Or />
-                <Button color="blue">Sign Up</Button>
+                <Button style={{ backgroundColor: "#f85032" }}>Kayıt Ol</Button>
               </Button.Group>
             </Menu.Item>
           </Menu.Menu>

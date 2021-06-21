@@ -1,20 +1,32 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Grid } from "semantic-ui-react";
+import { Grid,Container } from "semantic-ui-react";
+
+
 import AddJobPosting from "../components/AddJobPosting";
-import CandidateList from "../components/CandidateList";
+import Home from "../pages/Home";
 import EmployerList from "../components/EmployerList";
+import JobPosting from "../pages/JobPosting";
 
 export default function Dashboard() {
   return (
-    <div>
-      <Grid>
+    <div className="dashboard" style={{ minHeight: "90em" }} >
+      <Grid style={{ width: "100%" }}>
         <Grid.Row>
-          <Grid.Column width={16}>
-            <Route exact path="/" component={CandidateList}></Route>
+          <div style={{ width: "100%" }}>
+            <Route exact path="/" component={Home}></Route>
             <Route exact path="/employerlist" component={EmployerList}></Route>
-            <Route exact path="/addjobposting" component={AddJobPosting}></Route>
-          </Grid.Column>
+            <Route
+              exact
+              path="/jobposting"
+              component={JobPosting}
+            ></Route>
+            <Route
+              exact
+              path="/addjobposting"
+              component={AddJobPosting}
+            ></Route>
+          </div>
         </Grid.Row>
       </Grid>
     </div>

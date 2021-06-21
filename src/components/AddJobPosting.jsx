@@ -120,7 +120,7 @@ export default function AddJobPosting() {
   };
 
   return (
-    <div>
+    <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"-45em"}}>
       <Form onSubmit={formik.handleSubmit}>
         <Card.Group>
           <Card>
