@@ -28,37 +28,40 @@ export default function Home() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-around",
           alignItems: "center",
           flexDirection: "column",
           minHeight: "37em",
           backgroundImage: `url("http://localhost:3000/son.png")`,
+          
         }}
       >
         <Image
           size="large"
           src="http://localhost:3000/logo.png"
+          style={{width:"30%",minWidth:"15%"}}
         ></Image>
         <Input
-          style={{ display: "flex", width: "20%", marginTop: "9em" }}
+          style={{ display: "flex", width: "320px"}}
           size="huge"
           icon={<Icon name="search" inverted circular link />}
           placeholder="Pozisyon,firma adı,sektör"
         />
       </div>
-      <Grid style={{ display: "flex" }}>
+      <Grid style={{ display: "flex",margin:"0"}}>
         <Container style={{ display: "flex" }}>
-          <Grid style={{ display: "flex" }} centered>
+          <Grid style={{ display: "flex"}} centered>
             <Grid.Row
               style={{
+                height:"auto",
                 margin: "5em 0em 6em 0em",
                 display: "flex",
                 flexWrap: "wrap",
               }}
             >
-              <Grid.Column width={3} style={{ display: "flex" }}>
-                <ul style={{ listStyle: "none" }}>
-                  <li style={{ paddingLeft: "2.5em" }}>
+              <Grid.Column style={{ display: "flex",flex:"1",width:"fit-content",justifyContent:"center"  }}>
+                <ul style={{ listStyle: "none", width:"160px"}}>
+                  <li className="img">
                     <Icon
                       size="huge"
                       className="promotion"
@@ -84,9 +87,9 @@ export default function Home() {
                   </li>
                 </ul>
               </Grid.Column>
-              <Grid.Column width={3} style={{ display: "flex" }}>
-                <ul style={{ listStyle: "none" }}>
-                  <li style={{ paddingLeft: "2.9em" }}>
+              <Grid.Column style={{ display: "flex",flex:"1",width:"fit-content",justifyContent:"center" }}>
+                <ul style={{ listStyle: "none", width:"160px"}}>
+                  <li className="img">
                     <Icon
                       size="huge"
                       className="promotion"
@@ -113,9 +116,9 @@ export default function Home() {
                   </li>
                 </ul>
               </Grid.Column>
-              <Grid.Column width={3} style={{ display: "flex" }}>
-                <ul style={{ listStyle: "none" }}>
-                  <li style={{ paddingLeft: "2.5em" }}>
+              <Grid.Column style={{ display: "flex",flex:"1",width:"fit-content",justifyContent:"center" }}>
+                <ul style={{ listStyle: "none",width:"160px"}}>
+                  <li className="img">
                     <Icon
                       size="huge"
                       className="promotion"
@@ -141,9 +144,9 @@ export default function Home() {
                   </li>
                 </ul>
               </Grid.Column>
-              <Grid.Column width={3} style={{ display: "flex" }}>
-                <ul style={{ listStyle: "none" }}>
-                  <li style={{ paddingLeft: "2.5em" }}>
+              <Grid.Column style={{ display: "flex",flex:"1",width:"fit-content",justifyContent:"center" }}>
+                <ul style={{ listStyle: "none",width:"160px"}}>
+                  <li className="img">
                     <Icon
                       size="huge"
                       className="promotion"
@@ -184,7 +187,7 @@ export default function Home() {
                 alignItems: "center",
               }}
             >
-              <Card.Group style={{ marginBottom: "2em" }}>
+              <Card.Group style={{ marginBottom: "2em",justifyContent:"center"}}>
                 <Card className="shadow" style={{ backgroundColor: "#F7F5F4" }}>
                   <Card.Content style={{ backgroundColor: "white" }} >
                     <Image
@@ -200,7 +203,7 @@ export default function Home() {
                   <Card.Content extra>
                     <div className="cardFooter">
                       <div className="workingTime">
-                        <Icon disabled name="info circle" />
+                        <Icon disabled name="time" />
                         Zaman
                       </div>
                       <div className="city">
@@ -226,7 +229,7 @@ export default function Home() {
                   <Card.Content extra>
                     <div className="cardFooter">
                       <div className="workingTime">
-                        <Icon disabled name="info circle" />
+                        <Icon disabled name="time" />
                         Zaman
                       </div>
                       <div className="city">
@@ -252,7 +255,7 @@ export default function Home() {
                   <Card.Content extra>
                     <div className="cardFooter">
                       <div className="workingTime">
-                        <Icon disabled name="info circle" />
+                        <Icon disabled name="time" />
                         Zaman
                       </div>
                       <div className="city">

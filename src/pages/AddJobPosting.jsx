@@ -79,8 +79,7 @@ export default function AddJobPosting() {
       let jobPostingService = new JobPostingService();
 
       jobPostingService
-        .addJobPosting(values)
-        .then((result) => console.log(result.data.data));
+        .addJobPosting(values);
       resetForm({});
     },
   });

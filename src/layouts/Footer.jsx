@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className="footer">
         <Container>
-          <Grid stackable>
+          <Grid style={{margin:"5px"}} stackable>
             <Grid.Row style={{paddingBottom:"0"}}>
               <Grid.Column width={3}>
                 <Header as="h3" content="Hakkımızda" />

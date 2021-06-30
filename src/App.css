@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 110em;
+  padding-top: 50px;
   text-align: center;
   background: #ece9e6; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -22,47 +22,45 @@
   background: -webkit-linear-gradient(to right, #e73827, #f85032); 
   background: linear-gradient(to right, #e73827, #f85032);  */
 }
-.dashboard{
+.dashboard {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width:100%;
-  margin-top: 0;
+  width: 100%;
+  min-height: 79.7vh;
 }
-.home{
-display: flex;
+.textAlignLeft {
+  text-align: left;
+  height: auto;
 }
-.footer{
-display: flex;
-width:100%;
-padding-bottom: 0;
+.home {
+  display: flex;
+}
+.footer {
+  display: flex;
+  width: 100%;
 }
 .ui.main.container {
-  min-height: 66.5em;
   display: flex;
 }
 
-
-*{
-  font-family:sans-serif;
+* {
+  font-family: sans-serif;
 }
 
-.job-posting-card{
+.job-posting-card {
   margin: 30px auto;
   background-color: white;
   height: 85%;
   width: 70%;
   border-radius: 6px;
-  border-top: 4px solid #199AD6;
+  border-top: 4px solid #199ad6;
   box-shadow: 6px 6px 5px #c0c0c0;
   position: relative;
   padding-bottom: 10px;
   transition: width 3s;
 }
 
-
-
-.job-posting-card-city{
+.job-posting-card-city {
   color: #c0c0c0;
   border: 1px solid #c0c0c0;
   padding: 5px;
@@ -70,12 +68,12 @@ padding-bottom: 0;
   border-radius: 5px;
 }
 
-.job-posting-card-header{
+.job-posting-card-header {
   font-size: 25px;
   margin-top: 16px;
 }
 
-.job-posting-card-body{
+.job-posting-card-body {
   margin-top: 30px;
   padding-bottom: 20px;
   width: 90%;
@@ -83,13 +81,13 @@ padding-bottom: 0;
   margin-left: 30px;
 }
 
-.job-posting-card-city{
+.job-posting-card-city {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.job-posting-card-salary{
+.job-posting-card-salary {
   position: absolute;
   bottom: 0px;
   right: 0;
@@ -97,25 +95,33 @@ padding-bottom: 0;
   color: #c0c0c0;
 }
 
-.job-posting-card-detail-button{
+.job-posting-card-detail-button {
   margin-top: 10px;
   margin-right: 75%;
 }
 
-.cardHeader{
+.cardHeader {
   text-align: left;
- font-size: larger;
+  font-size: larger;
 }
 
-.company{
+.company {
   text-align: left;
 }
 
-.workingTime{
-  float: left;
+.workingTime {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
 }
-.city{
-  float:right
+.city {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+.like {
+  display: flex;
+  flex: 1;
 }
 
 .ui.widget {
@@ -125,18 +131,182 @@ padding-bottom: 0;
 }
 /* This will also have a red box shadow */
 .ui.red.widget {
-  color: #FF0000;
+  color: #ff0000;
 }
 
-.shadow{
-  box-shadow:0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2)!important;
+.shadow {
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2) !important;
 }
-.cardjp{
-  border: 1px solid grey!important;
+.cardjp {
+  border: 1px solid grey !important;
 }
-.shadow:hover{
-  box-shadow:0 10px 20px rgba(0, 0, 0, 0.5), 0 30px 80px rgba(166,173,201,.2)!important;
+.shadow:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
+    0 30px 80px rgba(166, 173, 201, 0.2) !important;
 }
-.cardContent{
-  background-color: white!important;
+.cardContent {
+  background-color: white !important;
+}
+.img {
+  width: 100%;
+  text-align: center;
+}
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.cityFilter {
+  width: fit-content;
+}
+.workingTimeFilter {
+  width: fit-content;
+}
+
+.hrmsSelectOption {
+  width: 80%;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #b2b3b3;
+  color: #b2b3b3;
+  margin-bottom: 10px;
+}
+.cvpage {
+  padding-top: 1em;
+}
+.cv {
+  min-height: 100vh;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 0em 2em 0 2em;
+  background-color: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+  box-shadow: 10px 10px rgba(41, 40, 40, 0.15);
+  transition: all 0.4s ease;
+}
+.cv:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 0%;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.cv-1 {
+  flex: 1;
+  display: flex;
+
+  justify-content: center;
+}
+
+.logo {
+  background-color: transparent;
+  height: auto;
+  padding-top: 1em;
+}
+.cv-2 {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+}
+.cvImg {
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  justify-content: left;
+  flex: 1;
+  flex-direction: column;
+  padding-top: 1em;
+}
+.cv-3 {
+  flex: 1;
+  display: flex;
+}
+
+.title {
+  box-shadow: 0 -1px 0 0 rgb(34 36 38 / 15%);
+}
+.cv-4 {
+  flex: 1;
+  display: flex;
+}
+
+.cv-5 {
+  flex: 1;
+  display: flex;
+}
+
+.cv-6 {
+  flex: 1;
+  display: flex;
+}
+
+.shadowNone::before {
+  box-shadow: none !important;
+}
+.shadowNone {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.si-container {
+  display: flex;
+  padding: 2em 0 0 0;
+}
+.si-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.si-input {
+  flex: 2;
+}
+.modal {
+  display: "flex" !important;
+  justify-content: flex-end !important;
+}
+
+.skillButton {
+  margin: 0 !important;
+  padding: 0 0 0 0 !important;
+}
+
+.pt-1 {
+  padding-top: 1em !important;
+}
+
+.ui.divider {
+  margin: 0rem 0rem 0.5rem 0rem !important;
+}
+.row::before {
+  box-shadow: none !important;
+}
+.containerEI {
+  padding-top: 1em;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.cardEmployer {
+  flex: 1;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: row;
+}
+.mr-1{
+  margin-right: 1em!important;
 }
