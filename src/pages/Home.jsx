@@ -3,13 +3,8 @@ import {
   Button,
   Image,
   Input,
-  Search,
-  Segment,
   Container,
-  List,
   Header,
-  Label,
-  Reveal,
   Card,
 } from "semantic-ui-react";
 import React, { useEffect, useState } from "react";
@@ -33,34 +28,40 @@ export default function Home() {
           flexDirection: "column",
           minHeight: "37em",
           backgroundImage: `url("http://localhost:3000/son.png")`,
-          
         }}
       >
         <Image
           size="large"
           src="http://localhost:3000/logo.png"
-          style={{width:"30%",minWidth:"15%"}}
+          style={{ width: "30%", minWidth: "15%" }}
         ></Image>
         <Input
-          style={{ display: "flex", width: "320px"}}
+          style={{ display: "flex", width: "320px" }}
           size="huge"
           icon={<Icon name="search" inverted circular link />}
           placeholder="Pozisyon,firma adı,sektör"
         />
       </div>
-      <Grid style={{ display: "flex",margin:"0"}}>
+      <Grid style={{ display: "flex", margin: "0" }}>
         <Container style={{ display: "flex" }}>
-          <Grid style={{ display: "flex"}} centered>
+          <Grid style={{ display: "flex" }} centered>
             <Grid.Row
               style={{
-                height:"auto",
+                height: "auto",
                 margin: "5em 0em 6em 0em",
                 display: "flex",
                 flexWrap: "wrap",
               }}
             >
-              <Grid.Column style={{ display: "flex",flex:"1",width:"fit-content",justifyContent:"center"  }}>
-                <ul style={{ listStyle: "none", width:"160px"}}>
+              <Grid.Column
+                style={{
+                  display: "flex",
+                  flex: "1",
+                  width: "fit-content",
+                  justifyContent: "center",
+                }}
+              >
+                <ul style={{ listStyle: "none", width: "160px" }}>
                   <li className="img">
                     <Icon
                       size="huge"
@@ -87,8 +88,15 @@ export default function Home() {
                   </li>
                 </ul>
               </Grid.Column>
-              <Grid.Column style={{ display: "flex",flex:"1",width:"fit-content",justifyContent:"center" }}>
-                <ul style={{ listStyle: "none", width:"160px"}}>
+              <Grid.Column
+                style={{
+                  display: "flex",
+                  flex: "1",
+                  width: "fit-content",
+                  justifyContent: "center",
+                }}
+              >
+                <ul style={{ listStyle: "none", width: "160px" }}>
                   <li className="img">
                     <Icon
                       size="huge"
@@ -116,8 +124,15 @@ export default function Home() {
                   </li>
                 </ul>
               </Grid.Column>
-              <Grid.Column style={{ display: "flex",flex:"1",width:"fit-content",justifyContent:"center" }}>
-                <ul style={{ listStyle: "none",width:"160px"}}>
+              <Grid.Column
+                style={{
+                  display: "flex",
+                  flex: "1",
+                  width: "fit-content",
+                  justifyContent: "center",
+                }}
+              >
+                <ul style={{ listStyle: "none", width: "160px" }}>
                   <li className="img">
                     <Icon
                       size="huge"
@@ -144,8 +159,15 @@ export default function Home() {
                   </li>
                 </ul>
               </Grid.Column>
-              <Grid.Column style={{ display: "flex",flex:"1",width:"fit-content",justifyContent:"center" }}>
-                <ul style={{ listStyle: "none",width:"160px"}}>
+              <Grid.Column
+                style={{
+                  display: "flex",
+                  flex: "1",
+                  width: "fit-content",
+                  justifyContent: "center",
+                }}
+              >
+                <ul style={{ listStyle: "none", width: "160px" }}>
                   <li className="img">
                     <Icon
                       size="huge"
@@ -187,9 +209,11 @@ export default function Home() {
                 alignItems: "center",
               }}
             >
-              <Card.Group style={{ marginBottom: "2em",justifyContent:"center"}}>
+              <Card.Group
+                style={{ marginBottom: "2em", justifyContent: "center" }}
+              >
                 <Card className="shadow" style={{ backgroundColor: "#F7F5F4" }}>
-                  <Card.Content style={{ backgroundColor: "white" }} >
+                  <Card.Content style={{ backgroundColor: "white" }}>
                     <Image
                       floated="right"
                       size="tiny"

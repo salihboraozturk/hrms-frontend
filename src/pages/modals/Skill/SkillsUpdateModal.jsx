@@ -1,23 +1,13 @@
 import React from "react";
-import {
-  Input,
-  Menu,
-  Segment,
-  Tab,
-  Container,
-  Icon,
-  Divider,
-} from "semantic-ui-react";
-
-import { Button, Header, Modal } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
+import { Button, Modal } from "semantic-ui-react";
 import { useState } from "react";
-import HrmsTextInput from "../../utilities/customFormControls/hrmsTextInput";
+import HrmsTextInput from "../../../utilities/customFormControls/hrmsTextInput";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import SkillService from "../../services/skillService";
-import { useHistory, useParams } from "react-router-dom";
+import SkillService from "../../../services/skillService";
 
-export default function LanguagesUpdateModal(props) {
+export default function SkillsUpdateModal(props) {
   const [open, setOpen] = useState(false);
 
   const schema = Yup.object({
@@ -41,16 +31,17 @@ export default function LanguagesUpdateModal(props) {
         <Button
           style={{
             float: "right",
-            color: "Gold",
+            color: "blue",
             backgroundColor: "transparent",
           }}
           animated="fade"
           circular
+          className="cvBtn"
         >
-          <Button.Content visible>
+          <Button.Content hidden>
             <Icon name="setting" />
           </Button.Content>
-          <Button.Content hidden>Düzenle</Button.Content>
+          <Button.Content className="textAlignLeft" visible>Düzenle</Button.Content>
         </Button>
       }
     >

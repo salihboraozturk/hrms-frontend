@@ -1,12 +1,13 @@
+import "../css/Navi.css"
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Container, Button, Image, Menu, Icon } from "semantic-ui-react";
 
 export default function Navi() {
   return (
-    <div style={{ width: "100%"}}>
-      <Menu fixed="top" style={{backgroundColor:"#4471FE"}} secondary>
-        <Container>
+    <div className="navbar">
+      <Menu className="navbarmenu" fixed="top" style={{backgroundColor:"#4471FE"}} secondary>
+        <Container className="navbarcontainer">
           <Menu.Item name="HRMS" exact as={NavLink} to="/">
            <Image size="small" src="http://localhost:3000/logo.png"></Image>
           </Menu.Item>

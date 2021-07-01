@@ -161,7 +161,7 @@ export default function JobPosting() {
           </Grid.Column>
           <Grid.Column width={3}>
             <Card>
-              <Image src="/images/avatar/large/daniel.jpg" wrapped ui={false} />
+              <Image src="https://blog.ramazansancar.com.tr/wp-content/uploads/2019/08/840fc919c6e970bf8ba3cb6fbd822d0c1041cc8b.png" wrapped ui={false} />
               <Card.Content>
                 <Card.Header>Daniel</Card.Header>
                 <Card.Meta>Joined in 2016</Card.Meta>

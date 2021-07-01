@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbarmenu {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbarcontainer{
+    display: flex;
+    flex-wrap: wrap;
+}

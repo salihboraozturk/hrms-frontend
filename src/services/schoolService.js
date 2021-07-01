@@ -5,4 +5,13 @@ export default class SchoolService {
       console.log(school)
     return axios.post("http://localhost:8081/api/schools/update", school);
   }
+  add(school) {
+    console.log(school)
+  return axios.post("http://localhost:8081/api/schools/add", school);
+}
+deleteById(schoolId) {
+  return axios.delete(
+    "http://localhost:8081/api/schools/deletebyid?schoolId=" + schoolId
+  );
+}
 }

@@ -8,7 +8,6 @@ import {
   Button,
   Grid,
   Modal,
-  Header,
 } from "semantic-ui-react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
