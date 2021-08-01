@@ -7,11 +7,11 @@ import {
   Grid,
   Pagination,
 } from "semantic-ui-react";
-import JobPostingFilter from "../pages/jobPostingFilter";
+import JobPostingFilter from "./JobPostingFilter";
 import JobPostingService from "../services/jobPostingService";
 import FavoriteAdsService from "../services/favoriteAdsService";
 import { useHistory, useParams } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 export default function JobPosting() {
   const [jobPostings, setjobPostings] = useState([]);
   const [jobPostingCount, setjobPostingCount] = useState([]);
@@ -62,7 +62,7 @@ export default function JobPosting() {
     history.push(
       `/jobposting/getallbypage/pageNo/${pageNo}/pageSize/${pageSize}`
     );
-    rendering()
+    rendering();
   }
   function handleChangeFavoriteStatus(candidateId, jobPostingId) {
     let favoriteAdsService = new FavoriteAdsService();
@@ -70,7 +70,7 @@ export default function JobPosting() {
       candidateId,
       jobPostingId
     );
-    rendering()
+    rendering();
   }
   function checkFavouritePosting(jobPostingId) {
     var bool = false;
@@ -88,6 +88,7 @@ export default function JobPosting() {
       <Container>
         <Grid columns={3}>
           <Grid.Column
+            className="sidebar"
             width={3}
             style={{
               paddingLeft: "0px",
@@ -97,9 +98,15 @@ export default function JobPosting() {
           >
             <JobPostingFilter></JobPostingFilter>
           </Grid.Column>
-          <Grid.Column width={10} style={{ paddingRight: "0px" }}>
+          <Grid.Column
+            className="main-content"
+            width={10}
+            style={{ paddingRight: "0px" }}
+          >
             {jobPostings.map((jobPosting) => (
               <Card
+                as={NavLink}
+                to={`/jobposting/${jobPosting.id}`}
                 className="shadow cardjp"
                 style={{ backgroundColor: "#F7F5F4", width: "100%" }}
                 key={jobPosting.id}
@@ -159,9 +166,13 @@ export default function JobPosting() {
               onPageChange={(event, data) => handlePagination(data.activePage)}
             />
           </Grid.Column>
-          <Grid.Column width={3}>
+          <Grid.Column width={3} className="profilebar">
             <Card>
-              <Image src="https://blog.ramazansancar.com.tr/wp-content/uploads/2019/08/840fc919c6e970bf8ba3cb6fbd822d0c1041cc8b.png" wrapped ui={false} />
+              <Image
+                src="https://blog.ramazansancar.com.tr/wp-content/uploads/2019/08/840fc919c6e970bf8ba3cb6fbd822d0c1041cc8b.png"
+                wrapped
+                ui={false}
+              />
               <Card.Content>
                 <Card.Header>Daniel</Card.Header>
                 <Card.Meta>Joined in 2016</Card.Meta>

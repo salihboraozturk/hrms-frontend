@@ -37,4 +37,8 @@ export default class JobPostingService {
     values.listingDate = "2015-06-06";
     return axios.post("http://localhost:8081/api/jobposting/add", values);
   }
+  getById(id) {
+    return axios.get("http://localhost:8081/api/jobposting/getbyid?jobPostingId="+id);
+  }
+  
 }

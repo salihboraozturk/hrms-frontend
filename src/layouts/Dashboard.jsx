@@ -6,10 +6,11 @@ import AddJobPosting from "../pages/AddJobPosting";
 import Home from "../pages/Home";
 import EmployerList from "../pages/EmployerList";
 import JobPosting from "../pages/JobPosting";
-import JobPostingFilter from "../pages/jobPostingFilter";
+import JobPostingFilter from "../pages/JobPostingFilter";
 import CurricullumVitae from "../pages/CurricullumVitae";
 import SystemUserInfo from "../pages/SystemUserInfo";
 import EmployerInfo from "../pages/EmployerInfo";
+import JobPostingDetail from "../pages/JobPostingDetail";
 
 export default function Dashboard() {
   return (
@@ -65,6 +66,11 @@ export default function Dashboard() {
               exact
               path="/employer/:id"
               component={EmployerInfo}
+            />
+              <Route
+              exact
+              path="/jobposting/:id"
+              component={JobPostingDetail}
             />
           </div>
         </Grid.Row>
