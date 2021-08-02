@@ -1,20 +1,16 @@
+import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
-import * as Yup from "yup";
 import {
-  Form,
-  Card,
-  Input,
-  Label,
-  Button,
-  Dropdown,
+  Button, Card, Dropdown, Form, Input,
+  Label
 } from "semantic-ui-react";
+import * as Yup from "yup";
 import CityService from "../services/cityService";
-import JobPositionService from "../services/jobPositionService";
 import EmployerService from "../services/employerService";
+import JobPositionService from "../services/jobPositionService";
+import JobPostingService from "../services/jobPostingService";
 import JobTypeService from "../services/jobTypeService";
 import WorkingTimeService from "../services/workingTimeService";
-import JobPostingService from "../services/jobPostingService";
-import { useFormik } from "formik";
 
 export default function AddJobPosting() {
   const [cities, setCities] = useState([]);

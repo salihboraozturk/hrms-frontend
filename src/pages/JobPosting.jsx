@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { NavLink, useHistory, useParams } from "react-router-dom";
 import {
-  Card,
-  Icon,
-  Image,
-  Container,
-  Grid,
-  Pagination,
+  Card, Container,
+  Grid, Icon,
+  Image, Pagination
 } from "semantic-ui-react";
-import JobPostingFilter from "./JobPostingFilter";
-import JobPostingService from "../services/jobPostingService";
 import FavoriteAdsService from "../services/favoriteAdsService";
-import { useHistory, useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import JobPostingService from "../services/jobPostingService";
+import JobPostingFilter from "./JobPostingFilter";
 export default function JobPosting() {
   const [jobPostings, setjobPostings] = useState([]);
   const [jobPostingCount, setjobPostingCount] = useState([]);

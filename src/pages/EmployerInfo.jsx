@@ -1,18 +1,13 @@
+import { Form, Formik } from "formik";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
-  Card,
-  Icon,
-  Image,
-  Container,
-  Button,
-  Grid,
-  Modal,
+  Button, Card, Container, Grid, Icon,
+  Image, Modal
 } from "semantic-ui-react";
-import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import HrmsTextInput from "../utilities/customFormControls/hrmsTextInput";
 import EmployerService from "../services/employerService";
+import HrmsTextInput from "../utilities/customFormControls/hrmsTextInput";
 export default function EmployerInfo() {
   const { id } = new useParams();
   const [employer, setEmployer] = useState({});

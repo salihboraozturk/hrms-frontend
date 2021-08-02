@@ -1,10 +1,10 @@
+import { Form, Formik } from "formik";
 import React, { useEffect, useState } from "react";
-import { Menu, Button } from "semantic-ui-react";
+import { useHistory } from "react-router";
+import { Button, Menu } from "semantic-ui-react";
+import * as Yup from "yup";
 import CityService from "../services/cityService";
 import WorkingTimeService from "../services/workingTimeService";
-import { Formik, Form } from "formik";
-import * as Yup from "yup";
-import { useHistory } from "react-router";
 import HrmsSelectOption from "../utilities/customFormControls/hrmsSelectOption";
 
 export default function JobPostingFilter() {

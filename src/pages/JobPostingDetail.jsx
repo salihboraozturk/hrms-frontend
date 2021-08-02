@@ -1,26 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
 import {
-  Button,
-  Card,
-  Icon,
-  Image,
-  Item,
-  Label,
-  Container,
+  Button, Container, Grid,
+  Header, Icon,
+  Image, Label
 } from "semantic-ui-react";
 import JobPostingService from "../services/jobPostingService";
-import {
-  Divider,
-  Dropdown,
-  Grid,
-  Header,
-  List,
-  Menu,
-  Segment,
-} from "semantic-ui-react";
 export default function JobPostingDetail() {
   let { id } = useParams();
   const [jobPosting, setJobPosting] = useState({});

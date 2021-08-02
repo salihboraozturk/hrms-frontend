@@ -1,10 +1,10 @@
+import { Form, Formik } from "formik";
 import React, { useEffect, useState } from "react";
-import HrmsTextInput from "../utilities/customFormControls/hrmsTextInput";
-import { Formik, Form } from "formik";
-import * as Yup from "yup";
-import { Button, Container, Label } from "semantic-ui-react";
-import SystemUserService from "../services/systemUserService";
 import { useParams } from "react-router-dom";
+import { Button, Container } from "semantic-ui-react";
+import * as Yup from "yup";
+import SystemUserService from "../services/systemUserService";
+import HrmsTextInput from "../utilities/customFormControls/hrmsTextInput";
 export default function SystemUserInfo() {
   const [systemUser, setsystemUser] = useState();
   const { id } = useParams();

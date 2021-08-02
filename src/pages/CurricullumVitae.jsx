@@ -1,21 +1,21 @@
-import "../css/CurricullumVitae.css";
 import React, { useEffect, useState } from "react";
-import { Container, Icon, Divider, Grid } from "semantic-ui-react";
+import { useParams } from "react-router-dom";
+import { Container, Divider, Grid, Icon } from "semantic-ui-react";
+import "../css/CurricullumVitae.css";
 import CandidateService from "../services/candidateService";
-import LanguagesUpdateModal from "./modals/CandidateLanguage/LanguagesUpdateModal";
+import CandidateInfoUpdateModal from "./modals/CandidateInfo/CandidateInfoUpdateModal";
 import LanguageAddModal from "./modals/CandidateLanguage/LanguageAddModal";
 import LanguageDeleteModal from "./modals/CandidateLanguage/LanguageDeleteModal";
-import SkillsUpdateModal from "./modals/Skill/SkillsUpdateModal";
+import LanguagesUpdateModal from "./modals/CandidateLanguage/LanguagesUpdateModal";
+import JobExperienceAddModal from "./modals/JobExperience/JobExperienceAddModal";
+import JobExperienceDeleteModal from "./modals/JobExperience/JobExperienceDeleteModal";
+import JobExperiencesUpdateModal from "./modals/JobExperience/JobExperiencesUpdate";
+import SchoolAddModal from "./modals/School/SchoolAddModal";
+import SchoolDeleteModal from "./modals/School/SchoolDeleteModal";
+import SchoolsUpdateModal from "./modals/School/SchoolsUpdateModal";
 import SkillAddModal from "./modals/Skill/SkillAddModal";
 import SkillDeleteModal from "./modals/Skill/SkillDeleteModal";
-import SchoolDeleteModal from "./modals/School/SchoolDeleteModal";
-import JobExperiencesUpdateModal from "./modals/JobExperience/JobExperiencesUpdate";
-import JobExperienceAddModal from "./modals/JobExperience/JobExperienceAddModal";
-import SchoolsUpdateModal from "./modals/School/SchoolsUpdateModal";
-import SchoolAddModal from "./modals/School/SchoolAddModal";
-import CandidateInfoUpdateModal from "./modals/CandidateInfo/CandidateInfoUpdateModal";
-import JobExperienceDeleteModal from "./modals/JobExperience/JobExperienceDeleteModal";
-import { useParams } from "react-router-dom";
+import SkillsUpdateModal from "./modals/Skill/SkillsUpdateModal";
 
 export default function CurricullumVitae() {
   const [candidateCV, setcandidateCV] = useState({});

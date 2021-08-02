@@ -1,15 +1,9 @@
-import {
-  Icon,
-  Button,
-  Image,
-  Input,
-  Container,
-  Header,
-  Card,
-} from "semantic-ui-react";
 import React, { useEffect, useState } from "react";
+import {
+  Button, Card, Container, Grid, Header, Icon, Image,
+  Input
+} from "semantic-ui-react";
 import JobPostingService from "../services/jobPostingService";
-import { Grid } from "semantic-ui-react";
 export default function Home() {
   const [jobPostings, setjobPostings] = useState([]);
   useEffect(() => {

@@ -1,16 +1,16 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Grid, Container } from "semantic-ui-react";
-
+import { Grid } from "semantic-ui-react";
 import AddJobPosting from "../pages/AddJobPosting";
-import Home from "../pages/Home";
-import EmployerList from "../pages/EmployerList";
-import JobPosting from "../pages/JobPosting";
-import JobPostingFilter from "../pages/JobPostingFilter";
 import CurricullumVitae from "../pages/CurricullumVitae";
-import SystemUserInfo from "../pages/SystemUserInfo";
 import EmployerInfo from "../pages/EmployerInfo";
+import EmployerList from "../pages/EmployerList";
+import Home from "../pages/Home";
+import JobPosting from "../pages/JobPosting";
 import JobPostingDetail from "../pages/JobPostingDetail";
+import JobPostingFilter from "../pages/JobPostingFilter";
+import SystemUserInfo from "../pages/SystemUserInfo";
+
 
 export default function Dashboard() {
   return (
