@@ -2,11 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import {
   Button,
-  Container,
-  Image,
-  Menu,
-  Dropdown,
-  Icon,
+  Container, Dropdown, Image,
+  Menu
 } from "semantic-ui-react";
 import "../css/Navi.css";
 

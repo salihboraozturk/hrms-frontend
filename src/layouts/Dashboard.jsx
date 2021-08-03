@@ -5,12 +5,12 @@ import AddJobPosting from "../pages/AddJobPosting";
 import CurricullumVitae from "../pages/CurricullumVitae";
 import EmployerInfo from "../pages/EmployerInfo";
 import EmployerList from "../pages/EmployerList";
+import Favorites from "../pages/Favorites";
 import Home from "../pages/Home";
 import JobPosting from "../pages/JobPosting";
 import JobPostingDetail from "../pages/JobPostingDetail";
 import JobPostingFilter from "../pages/JobPostingFilter";
 import SystemUserInfo from "../pages/SystemUserInfo";
-
 
 export default function Dashboard() {
   return (
@@ -52,26 +52,15 @@ export default function Dashboard() {
               path="/jobposting/getallbypage/pageNo/:pageNo/pageSize/:pageSize"
               component={JobPosting}
             />
-            <Route
-              exact
-              path="/cv/:id"
-              component={CurricullumVitae}
-            />
+            <Route exact path="/cv/:id" component={CurricullumVitae} />
             <Route
               exact
               path="/systemuserinfo/:id"
               component={SystemUserInfo}
             />
-              <Route
-              exact
-              path="/employer/:id"
-              component={EmployerInfo}
-            />
-              <Route
-              exact
-              path="/jobposting/:id"
-              component={JobPostingDetail}
-            />
+            <Route exact path="/employer/:id" component={EmployerInfo} />
+            <Route exact path="/jobposting/:id" component={JobPostingDetail} />
+            <Route exact path="/favorites" component={Favorites} />
           </div>
         </Grid.Row>
       </Grid>

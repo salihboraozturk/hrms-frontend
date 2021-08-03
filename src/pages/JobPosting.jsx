@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useHistory, useParams } from "react-router-dom";
 import {
-  Card, Container,
-  Grid, Icon,
-  Image, Pagination
+  Card,
+  Container,
+  Grid,
+  Icon,
+  Image,
+  Pagination,
 } from "semantic-ui-react";
 import FavoriteAdsService from "../services/favoriteAdsService";
 import JobPostingService from "../services/jobPostingService";
@@ -101,13 +104,15 @@ export default function JobPosting() {
           >
             {jobPostings.map((jobPosting) => (
               <Card
-                as={NavLink}
-                to={`/jobposting/${jobPosting.id}`}
                 className="shadow cardjp"
                 style={{ backgroundColor: "#F7F5F4", width: "100%" }}
                 key={jobPosting.id}
               >
-                <Card.Content className="cardContent">
+                <Card.Content
+                  as={NavLink}
+                  to={`/jobposting/${jobPosting.id}`}
+                  className="cardContent"
+                >
                   <Image
                     floated="right"
                     style={{ height: "70px", width: "auto" }}
@@ -122,7 +127,11 @@ export default function JobPosting() {
                 </Card.Content>
                 <Card.Content extra>
                   <div className="cardFooter">
-                    <div className="workingTime">
+                    <div
+                      as={NavLink}
+                      to={`/jobposting/${jobPosting.id}`}
+                      className="workingTime"
+                    >
                       <Icon disabled name="time" />
                       {jobPosting.workingTime.workingTimeName}
                     </div>
@@ -144,7 +153,11 @@ export default function JobPosting() {
                         />
                       )}
                     </div>
-                    <div className="city">
+                    <div
+                      as={NavLink}
+                      to={`/jobposting/${jobPosting.id}`}
+                      className="city"
+                    >
                       <Icon disabled name="map marker" />
                       {jobPosting.city.cityName}
                     </div>
